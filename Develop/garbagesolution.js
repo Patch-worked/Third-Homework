@@ -231,6 +231,50 @@ function generateSpecial() {
   return pass;
 } 
 
+function switcher(){
+    if (includeUppercase == true && includeLowercase == true && includeNumbers == true && includeSpecialCharacters == true ){
+        generateP();
+    }
+    if (includeUppercase == true && includeLowercase == true && includeNumbers == false && includeSpecialCharacters == false ){
+        generateUpperLower();
+    }
+    if (includeUppercase == true && includeLowercase == false && includeNumbers == false && includeSpecialCharacters == false ){
+        generateAllupper();
+    }
+    if (includeUppercase == true && includeLowercase == false && includeNumbers == true && includeSpecialCharacters == false ){
+        generateUpperNumber();
+    }
+    if (includeUppercase == true && includeLowercase == false && includeNumbers == false && includeSpecialCharacters == true ){
+        generateUpperSpecial();
+    }
+    if (includeUppercase == true && includeLowercase == true && includeNumbers == true && includeSpecialCharacters == false ){
+        generateUpperLowerNumber();
+    }
+    if (includeUppercase == true && includeLowercase == true && includeNumbers == false && includeSpecialCharacters == true ){
+        generateUpperLowerSpecial();
+    }
+    if (includeUppercase == false && includeLowercase == true && includeNumbers == false && includeSpecialCharacters == false ){
+        generateLower();
+    }
+    if (includeUppercase == false && includeLowercase == true && includeNumbers == true && includeSpecialCharacters == false ){
+        generateLowerNumber();
+    }
+    if (includeUppercase == false && includeLowercase == true && includeNumbers == false && includeSpecialCharacters == true ){
+        generateLowerSpecial();
+    }
+    if (includeUppercase == false && includeLowercase == true && includeNumbers == true && includeSpecialCharacters == true ){
+        generateLowerNumberSpecial();
+    }
+    if (includeUppercase == false && includeLowercase == false && includeNumbers == true && includeSpecialCharacters == false ){
+        generateNumber();
+    }
+    if (includeUppercase == false && includeLowercase == false && includeNumbers == true && includeSpecialCharacters == true ){
+        generateNumberSpecial();
+    }
+    if (includeUppercase == false && includeLowercase == false && includeNumbers == false && includeSpecialCharacters == true ){
+        generateSpecial();
+    }
+}
 // Add event listener to generate button
-generateBtn.addEventListener("click", generateP);
+generateBtn.addEventListener("click", switcher);
 

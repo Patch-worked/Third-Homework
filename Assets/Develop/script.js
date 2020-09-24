@@ -57,7 +57,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   
-  for (characters =0; passwordLength > characters; characters++) {
+  for (characters = 0; passwordLength > characters; characters++) {
     randomFunc();
     console.log(characters);
   }
